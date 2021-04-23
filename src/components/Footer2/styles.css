@@ -1,0 +1,7 @@
+.footer2 {
+  width: 100%;
+  height: 1000px;
+  background-image: url('./images/Earth.jpeg');
+  background-size: cover;
+  margin-top: 80%;
+}

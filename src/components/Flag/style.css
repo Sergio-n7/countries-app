@@ -1,0 +1,6 @@
+.flag {
+  width: 120px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+}

@@ -1,0 +1,12 @@
+.flag-display-cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f9f3f3;
+}
+
+.margin-cart {
+  margin-top: 150px;
+  height: 100px;
+  background-color: blue;
+}

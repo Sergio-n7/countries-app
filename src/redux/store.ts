@@ -10,6 +10,12 @@ const initState: AppState = {
   product: {
     inCart: [],
   },
+
+  //I create a new initial state in the store and I need to tell the types in the types file
+  country: {
+    allCountries: [],
+    added: [],
+  },
 }
 
 export default function makeStore(initialState = initState) {

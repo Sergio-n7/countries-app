@@ -1,0 +1,14 @@
+.input {
+  width: 580px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-left: 130px;
+}
+
+.container-input {
+  width: 100%;
+  margin: 0;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: center;
+}

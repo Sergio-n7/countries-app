@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.world-img {
+  background-image: url('./images/worlPicture.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  padding-top: 80px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  width: 400px;
+  margin: 200px 0 0 100px;
+  color: #ffffff;
+  text-shadow: 3px 1px 3px black;
+  font-family: 'Antonio', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 6rem;
+  color: #ffffff;
+  margin-left: 200px;
+  margin-top: 40px;
+  text-shadow: 3px 1px 3px black;
+  font-family: 'Permanent Marker', cursive;
+}

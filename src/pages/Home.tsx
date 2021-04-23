@@ -1,41 +1,37 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
-
-import { Product, AppState } from '../types'
-import { addProduct, removeProduct } from '../redux/actions'
-
-const names = ['Apple', 'Orange', 'Avocado', 'Banana', 'Cucumber', 'Carrot']
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import Container1 from '../components/Container1'
+import Container2 from '../components/Container2'
+import Container3 from '../components/container3'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
+import MainTable from '../components/MainTable'
+import { SearchBar } from '../components/SearchBar'
+import useCountries from '../hooks/useCountries'
+import { AppState } from '../types'
 
 export default function Home() {
-  const dispatch = useDispatch()
-  const products = useSelector((state: AppState) => state.product.inCart)
+  const [keyword, setKeyword] = useState('')
+  const [countries] = useCountries(keyword)
+  //console.log(countries, 'from home 2')
 
-  const handleAddProduct = () => {
-    const product: Product = {
-      id: (+new Date()).toString(),
-      name: names[Math.floor(Math.random() * names.length)],
-      price: +(Math.random() * 10).toFixed(2),
-    }
-    dispatch(addProduct(product))
+  const { added } = useSelector((state: AppState) => state.country)
+  //console.log(added, 'added from home')
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setKeyword(event.target.value)
+
+    //console.log(event.target.value);
   }
 
   return (
-    <>
-      <h1>Home page</h1>
-      {products.length <= 0 && <div>No products in cart</div>}
-      <ul>
-        {products.map((p) => (
-          <li key={p.id}>
-            <Link to={`/products/${p.id}`}>{`${p.name} - $${p.price}`}</Link>
-
-            {'  '}
-
-            <button onClick={() => dispatch(removeProduct(p))}>Remove</button>
-          </li>
-        ))}
-      </ul>
-      <button onClick={handleAddProduct}>Add product</button>
-    </>
+    <body className="App">
+      <Header />
+      <Container1 />
+      <Container2 />
+      <Container3 />
+      <SearchBar keyword={keyword} handleChange={handleChange} />
+      <MainTable countries={countries} />
+      <Footer />
+    </body>
   )
 }
