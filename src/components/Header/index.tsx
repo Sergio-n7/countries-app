@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   const count = useSelector((state: AppState) => state.country.added.length)
+
   const dispatch = useDispatch()
+
   return (
     <div>
       <header>

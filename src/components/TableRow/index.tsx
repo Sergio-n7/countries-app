@@ -14,14 +14,14 @@ type TableRowProps = {
 export default function TableRow({ country }: TableRowProps) {
   const dispatch = useDispatch()
   return (
-    <div className="flag-display">
+    <div>
       <div className="flag-cart">
         <Flag flagUrl={country.flag} />
         <button
           className="visited"
           onClick={() => dispatch(AddCountry(country))}
         >
-          <i className="far fa-heart icon"></i>
+          <i className="fas fa-heart icon2"></i>
         </button>
       </div>
     </div>

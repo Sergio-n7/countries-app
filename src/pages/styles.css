@@ -4,8 +4,23 @@
   box-sizing: border-box;
 }
 
-.country-added {
-  background-image: url('./images/Earth.jpeg');
-  background-size: cover;
-  height: 100%;
+.countries-container {
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ffffff,
+    #3f413f,
+    #ffffff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #3f413f,
+    #ffffff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cart-container {
+  display: block;
+
+  justify-content: center;
 }

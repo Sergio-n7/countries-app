@@ -3,26 +3,47 @@
   text-align: center;
   border: none;
   background-color: white;
-  padding-top: 5px;
+  padding-top: 0;
   margin-bottom: 0;
   font-size: 0.6rem;
 }
 .visited:hover {
   color: brown;
+  opacity: 1;
 }
 
 .flag-cart {
-  min-width: 125px;
-  max-width: 125px;
+  min-width: 120px;
+  max-width: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 25px 5px;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px 1px #8e7f7f;
+
+  box-shadow: 0 1px 10px 1px #8e7f7f;
   margin: 10px 10px 10px 10px;
   background-color: white;
+  position: relative;
 }
 .flag-cart:hover {
   transform: scale(1.2);
+}
+
+.icon2 {
+  font-size: 1.1rem;
+  color: rgb(82, 9, 4);
+  margin-left: 35px;
+  margin-top: -25px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.icon2:hover {
+  color: rgb(143, 3, 3);
+  opacity: 1;
+}
+
+.icon2:active {
+  color: rgb(143, 3, 3);
+  opacity: 1;
 }

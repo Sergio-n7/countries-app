@@ -12,8 +12,8 @@ export default function Cart({ count }: CartProps) {
 
   //console.log(added, 'these are all the countries in the card')
   return (
-    <div className="margin-cart">
-      <div className="flag-display-cart">
+    <div>
+      <div>
         {added.map((country) => (
           <CartItem key={country.name} country={country} />
         ))}
