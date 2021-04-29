@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { DeleteCountry } from '../../redux/actions'
 import { Country } from '../../types'
 import Flag from '../Flag'
@@ -14,7 +15,7 @@ export default function CartItem({ country }: CartItemProps) {
     <div className="flag-display-cart">
       <div className="flag-cart-cart">
         <Flag flagUrl={country.flag} />
-        <td className="cart-info">{country.name}</td>
+        <Link to={`/country/${country.name}`}>{country.name}</Link>
         <td className="cart-info">{country.capital}</td>
         <td className="cart-info">{country.region}</td>
         <div onClick={() => dispatch(DeleteCountry(country))}>

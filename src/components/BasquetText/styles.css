@@ -1,4 +1,11 @@
 .sentence-basquet {
-  width: 70%;
+  margin-left: 0;
+  width: 800px;
   margin-top: 50px;
+}
+
+.sentence-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

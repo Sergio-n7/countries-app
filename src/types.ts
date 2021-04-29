@@ -5,10 +5,18 @@ export const REMOVE_PRODUCT = 'REMOVE_PRODUCT'
 export const SET_COUNTRIES = 'SET_COUNTRIES'
 export const ADD_COUNTRY = 'ADD_COUNTRY'
 export const DELETE_COUNTRY = 'DELETE_COUNTRY'
+export const SHOW_COUNTRY = 'SHOW_COUNTRY'
 
 //Countries types
 export type SetCountriesAction = {
   type: typeof SET_COUNTRIES
+  payload: {
+    country: Country[]
+  }
+}
+
+export type showCountry = {
+  type: typeof SHOW_COUNTRY
   payload: {
     country: Country[]
   }
@@ -46,6 +54,7 @@ export type deleteCountryAction = {
 export type CountryState = {
   allCountries: Country[]
   added: Country[]
+  show: Country[]
 }
 
 // I create the Union type
@@ -53,6 +62,7 @@ export type CountryActions =
   | SetCountriesAction
   | addCountryAction
   | deleteCountryAction
+  | showCountry
 
 // I create the AppState that contains all the state type I need
 export type AppState = {

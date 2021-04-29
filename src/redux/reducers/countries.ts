@@ -6,10 +6,11 @@ import {
   CountryState,
   DELETE_COUNTRY,
   SET_COUNTRIES,
+  SHOW_COUNTRY,
 } from '../../types'
 
 export default function country(
-  state: CountryState = { allCountries: [], added: [] },
+  state: CountryState = { allCountries: [], added: [], show: [] },
   action: CountryActions
 ): CountryState {
   switch (action.type) {
@@ -31,6 +32,7 @@ export default function country(
     case SET_COUNTRIES: {
       return { ...state, allCountries: action.payload.country }
     }
+
     default:
       return state
   }
