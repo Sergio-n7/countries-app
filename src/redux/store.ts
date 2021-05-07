@@ -15,7 +15,6 @@ const initState: AppState = {
   country: {
     allCountries: [],
     added: [],
-    show: [],
   },
 }
 

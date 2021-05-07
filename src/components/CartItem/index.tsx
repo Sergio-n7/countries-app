@@ -16,8 +16,8 @@ export default function CartItem({ country }: CartItemProps) {
       <div className="flag-cart-cart">
         <Flag flagUrl={country.flag} />
         <Link to={`/country/${country.name}`}>{country.name}</Link>
-        <td className="cart-info">{country.capital}</td>
-        <td className="cart-info">{country.region}</td>
+        <p className="cart-info">{country.capital}</p>
+        <p className="cart-info">{country.region}</p>
         <div onClick={() => dispatch(DeleteCountry(country))}>
           <i className="far fa-trash-alt icon"></i>
         </div>

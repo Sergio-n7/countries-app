@@ -5,7 +5,6 @@ import {
   CountryActions,
   DELETE_COUNTRY,
   SET_COUNTRIES,
-  SHOW_COUNTRY,
 } from '../../types'
 
 //I need to create the actions, must be the same we made the types
@@ -32,15 +31,6 @@ export function DeleteCountry(country: Country): CountryActions {
 export function setCountries(country: Country[]): CountryActions {
   return {
     type: SET_COUNTRIES,
-    payload: {
-      country,
-    },
-  }
-}
-
-export function showCountry(country: Country[]): CountryActions {
-  return {
-    type: SHOW_COUNTRY,
     payload: {
       country,
     },

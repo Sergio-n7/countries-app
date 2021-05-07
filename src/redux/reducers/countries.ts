@@ -6,11 +6,10 @@ import {
   CountryState,
   DELETE_COUNTRY,
   SET_COUNTRIES,
-  SHOW_COUNTRY,
 } from '../../types'
 
 export default function country(
-  state: CountryState = { allCountries: [], added: [], show: [] },
+  state: CountryState = { allCountries: [], added: [] },
   action: CountryActions
 ): CountryState {
   switch (action.type) {
