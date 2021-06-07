@@ -1,6 +1,6 @@
 name: CI/CD
  on:
-   pull-request:
+   push:
     branches: [master]
  jobs:
    deploy:
