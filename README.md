@@ -14,6 +14,8 @@ yarn install
 
 ## Features
 
+hello world
+
 - Redux
 - Redux-thunk
 - Redux-saga
