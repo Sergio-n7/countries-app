@@ -1,13 +1,11 @@
 import React from 'react'
 import './styles.css'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { AppState } from '../../types'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
   const count = useSelector((state: AppState) => state.country.added.length)
-
-  const dispatch = useDispatch()
 
   return (
     <div>

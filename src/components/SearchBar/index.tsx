@@ -1,6 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { AppState } from '../../types'
 import './input.css'
 
 type searchBarProps = {
@@ -9,8 +7,6 @@ type searchBarProps = {
 }
 
 export function SearchBar({ keyword, handleChange }: searchBarProps) {
-  const { added } = useSelector((state: AppState) => state.country)
-
   return (
     <div className="container-input">
       <input

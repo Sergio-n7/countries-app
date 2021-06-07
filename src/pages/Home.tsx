@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
 import Container1 from '../components/Container1'
 import Container2 from '../components/Container2'
 import Container3 from '../components/container3'
@@ -8,14 +7,12 @@ import Header from '../components/Header'
 import MainTable from '../components/MainTable'
 import { SearchBar } from '../components/SearchBar'
 import useCountries from '../hooks/useCountries'
-import { AppState } from '../types'
 
 export default function Home() {
   const [keyword, setKeyword] = useState('')
   const [countries] = useCountries(keyword)
   //console.log(countries, 'from home 2')
 
-  const { added } = useSelector((state: AppState) => state.country)
   //console.log(added, 'added from home')
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setKeyword(event.target.value)
