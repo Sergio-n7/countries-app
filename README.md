@@ -9,7 +9,6 @@ You should use either `npm` or `yarn` but not both. It's recommeded to use `yarn
 This template already comes with all needed packages. In case you want to install manually, check the dependencies in `package.json` file. To install, run:
 
 ```
-hello world
 yarn install
 ```
 
