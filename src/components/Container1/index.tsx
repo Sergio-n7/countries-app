@@ -6,7 +6,7 @@ export default function Container1() {
   return (
     <div className="world-img">
       <h1>DON'T LISTEN TO WHAT THEY SAY.</h1>
-      <h2>GO SEE.</h2>
+      <h2>GO SEE YOURSELF.</h2>
     </div>
   )
 }
