@@ -39,7 +39,7 @@ export function setCountries(country: Country[]): CountryActions {
 
 export function fetchCountries() {
   return async (dispatch: Dispatch) => {
-    const resp = await fetch('https://restcountries.eu/rest/v2/all')
+    const resp = await fetch('https://restcountries.com/v2/all')
     const country = await resp.json()
     dispatch(setCountries(country))
   }
