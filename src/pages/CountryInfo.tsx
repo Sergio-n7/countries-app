@@ -15,7 +15,7 @@ type CountryCartProps = {
 export default function CountryInfo({ country, flagUrl }: CountryCartProps) {
   const [showCountry, setShowCountry] = useState<Country>()
   const { name } = useParams<{ name: string }>()
-  const url = `https://restcountries.eu/rest/v2/name/${name}`
+  const url = `https://restcountries.com/v2/name/${name}`
 
   useEffect(() => {
     fetch(url)
